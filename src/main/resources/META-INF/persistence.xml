@@ -3,6 +3,9 @@
     <persistence-unit name="java2c6PU" transaction-type="RESOURCE_LOCAL">
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.example.db.Produs</class>
+        <class>com.example.db.Bere</class>
+        <class>com.example.db.Ciocolata</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
