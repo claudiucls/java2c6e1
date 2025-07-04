@@ -19,7 +19,10 @@ public class Main5 {
             try (var em = emf.createEntityManager()) {
                 // "SELECT * FROM bere
                 String sql = "SELECT b FROM Bere b";
-
+                // in loc de Bere se poate folosi Produs
+                // si resultatul este cel asteptat
+                // adica va afisa toate Berile si toate Ciocolatele
+                // in spate va face un UNION ALL
                 em.getTransaction().begin();
                 TypedQuery<Bere> query = em.createQuery(sql, Bere.class);
 
@@ -29,6 +32,24 @@ public class Main5 {
 
 
                 em.getTransaction().commit();
+
+                em.clear();
+
+                String sql2 ="SELECT b FROM Bere b WHERE b.alcool = ?1 AND b.nume =:nume";
+
+
+                em.getTransaction().begin();
+
+                TypedQuery<Bere> bere = em.createQuery(sql2, Bere.class);
+                bere.setParameter(1, 5);
+                bere.setParameter("nume","Tuborg");
+
+                List<Bere> beri = bere.getResultList();
+
+                beri.forEach(System.out::println);
+
+                em.getTransaction().commit();
+
 
             }
         }
