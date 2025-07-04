@@ -2,11 +2,14 @@ package com.example.db;
 
 import jakarta.persistence.*;
 
-@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-public class Produs {
+@MappedSuperclass
+//specifica JPA ca aceasta clasa va fi mostenita de entitati
+// dar ea in sine nu este o entitate
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Angajat {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String nume;
@@ -25,13 +28,5 @@ public class Produs {
 
     public void setNume(String nume) {
         this.nume = nume;
-    }
-
-    @Override
-    public String toString() {
-        return "Produs{" +
-                "id=" + id +
-                ", nume='" + nume + '\'' +
-                '}';
     }
 }
