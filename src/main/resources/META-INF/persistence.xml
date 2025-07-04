@@ -3,9 +3,14 @@
     <persistence-unit name="java2c6PU" transaction-type="RESOURCE_LOCAL">
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        //main
         <class>com.example.db.Produs</class>
         <class>com.example.db.Bere</class>
         <class>com.example.db.Ciocolata</class>
+        //main2
+        <class>com.example.db.Programator</class>
+        <class>com.example.db.Avocat</class>
 
 
         <properties>

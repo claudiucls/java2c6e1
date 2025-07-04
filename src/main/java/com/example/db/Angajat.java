@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @MappedSuperclass
 //specifica JPA ca aceasta clasa va fi mostenita de entitati
 // dar ea in sine nu este o entitate
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+
 public abstract class Angajat {
 
     @Id
