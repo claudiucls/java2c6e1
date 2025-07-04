@@ -2,6 +2,7 @@ package com.example.main;
 
 import com.example.db.NumePrenumeId;
 import com.example.db.Persoana;
+import com.example.db.Student;
 import jakarta.persistence.Persistence;
 
 public class Main3 {
@@ -18,8 +19,13 @@ public class Main3 {
                 p.setId(id);
                 p.setVarsta("35");
 
+                Student s = new Student();
+                s.setNume("Popescu");
+                s.setPrenume("Maria");
+
                 em.getTransaction().begin();
-                em.persist(p);
+                //em.persist(p);
+                em.persist(s);
                 em.getTransaction().commit();
 
             } catch (Exception e) {
