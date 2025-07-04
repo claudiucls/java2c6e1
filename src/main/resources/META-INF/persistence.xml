@@ -4,18 +4,16 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        //main
+<!--        // main-->
         <class>com.example.db.Produs</class>
         <class>com.example.db.Bere</class>
         <class>com.example.db.Ciocolata</class>
-        //main2
+<!--        //main2-->
         <class>com.example.db.Programator</class>
         <class>com.example.db.Avocat</class>
 
-        //main3
+<!--        main3-->
         <class>com.example.db.Persoana</class>
-
-        //main4
         <class>com.example.db.Student</class>
 
         <properties>
