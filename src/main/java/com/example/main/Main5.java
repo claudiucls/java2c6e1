@@ -2,7 +2,6 @@ package com.example.main;
 
 import com.example.db.Bere;
 import jakarta.persistence.Persistence;
-import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 
 import java.util.List;
@@ -11,6 +10,9 @@ import java.util.List;
     JPQL - Java Persistence Query Language
       - este o abstractizare a limbajelor sql
       - foloseste entitatile definite
+      - pot fi folosite doare pentru SELECT UPDATE sau DELETE
+       - nu este acceptat INSERT
+       - nu actualizeaza contextul
  */
 public class Main5 {
 
